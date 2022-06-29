@@ -1,0 +1,53 @@
+<div class="main-task">
+   <div class="main-task__body">
+      <div class="main-task__logo">mark task</div>
+
+      <select class="select__task">
+         <option value="робота" selected>робота</option>
+         <option value="відпочинок">відпочинок</option>
+         <option value="покупки">покупки</option>
+      </select>
+
+      <div class="main-task__name name-tasks">
+         <div class="name-tasks__new-task">
+            <span id="name-task">Назва задачі</span>
+         </div>
+      </div>
+
+      <div class="body-task__button-save buttons">
+         <button class="button _icon-back"></button>
+         <button class="button _icon-up"></button>
+         <button class="button _icon-delete"></button>
+      </div>
+
+   </div>
+</div>
+<div class="body-task__container">
+   <div class="body-task__body">
+      <div class="body-task__sidebar sidebar-task">
+         <div class="sidebar-task__buttons" ng-controller="addNewTask">
+            <form class="sidebar-task__form" name="frm" ng-submit="addTodo()">
+               <input class="new-task-name" type="text" placeholder="Hова задача" ng-model="newTodo" name="newtodo"
+                  minlength="1" maxlength="30" required>
+               <button class="button _icon-plus" ng-disable="frm.$invalid" ng-click="$storage"></button>
+            </form>
+            <div class="sidebar-task__new-item" ng-repeat="todo in todos">
+               <span class="name-task" id="name-task">{{todo.title}}<i ng-click="removeTask()"
+                     class="_icon-delete"></i></span>
+            </div>
+         </div>
+      </div>
+      <div class="body-task__text">
+         <div class="body-task__content content-text">
+            <textarea class="content-text__input" placeholder="Що плануєте?"></textarea>
+         </div>
+      </div>
+   </div>
+</div>
+
+
+
+
+<!--
+   view2
+-->
