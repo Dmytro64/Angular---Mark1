@@ -1,4 +1,4 @@
-**Step 1: Clone the angular layout repository using git: in GitBash need wwrite:
+**Step 1: Clone the angular layout repository using git: in GitBash need write:
 
 git clone git@github.com:Dmytro64/mark1.git
 
